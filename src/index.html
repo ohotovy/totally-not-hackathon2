@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        The API key:
+        It is here, because changing it in HTML is much easier
+        than changing it in the compiled JavaScript. Also
+        it can be set here from the backend.
+    -->
+    <meta name="api-key" content="3deb9f6d">
+
+    <title>Events in Prague</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="header__page-name">Events in Prague</h1>
+        <nav class="header__nav">
+            <a class="header__nav-link" href="#">Home</a>
+            <a class="header__nav-link" href="#">About</a>
+            <a class="header__nav-link" href="#">Contact</a>
+        </nav>
+    </div>
+
+    <main id="events" class="events">
+        <div class="featured-event">
+            <div class="featured-event__image-wrap">
+                <h2 class="featured-event__tag">Featured&nbsp;event</h2>
+                <img class="featured-event__image" src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png"
+                    alt="Event picture">
+            </div>
+            <div class="featured-event__description">
+                <div class="featured-event__info-wrap">
+                    <h2 class="featured-event__name">Event name</h2>
+                    <div class="featured-event__description-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Nam at eleifend sem. In arcu tortor, tincidunt et luctus et,
+                        iaculis eget mauris. Aliquam et tortor erat. Nullam auctor magna luctus, fringilla arcu id,
+                        ullamcorper orci. Mauris dui
+                        velit, auctor vitae accumsan posuere, aliquam nec massa. Aliquam cursus lorem eget finibus
+                        faucibus. Duis vel magna sed
+                        eros lacinia tincidunt. Praesent purus diam, efficitur sit amet dui nec, bibendum elementum
+                        lacus. Suspendisse erat sem,
+                        aliquet vitae augue vitae, pellentesque congue odio. Maecenas accumsan massa a quam tristique
+                        molestie. Nulla lobortis
+                        eu orci in fermentum.</div>
+                </div>
+                <button class="featured-event__button button">Register</button>
+            </div>
+        </div>
+        <div class="events-container">
+            <div class="events-container__event">
+                <h2 class="events-container__event-name">Event name</h2>
+                <button class="events-container__event-button button">More</button>
+            </div>
+        </div>
+    </main>
+
+    <!--
+        The hidden element that will be displayed in the modal window
+        Notice the "display: none" style, which makes sure that this element
+        will be invisible to the user in case the JavaScript does not load
+        or takes too long. This property will be removed by JavaScript when
+        it eventually runs (see Modal.js).
+    -->
+    <form id="registration-form" class="registration-form" action="#" method="post" style="display: none">
+
+        <h2 class="registration-form__headline">
+            Register for <span class="registration-form__event-name"></span>
+        </h2>
+
+        <div class="registration-form__group">
+            <label class="registration-form__label">Email</label>
+            <input class="registration-form__input" type="email" name="email">
+        </div>
+
+        <div class="registration-form__group registration-form__group--buttons">
+            <button class="registration-form__submit-button">Send registration</button>
+        </div>
+
+    </form>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
